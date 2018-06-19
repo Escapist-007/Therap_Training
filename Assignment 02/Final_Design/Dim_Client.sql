@@ -15,7 +15,6 @@
       GENDER        VARCHAR2(20 BYTE), 
       BIRTH_DATE    DATE, 
       STATUS        NUMBER(4,0),
-    
       
       MEDICAID_NUMBER VARCHAR2(128 CHAR),
    
@@ -41,11 +40,9 @@
     NOLOGGING;
 
 
-
-
 -- PROCEDURE FOR INSERTING DATA INTO DIMENSION TABLE FROM SOURCE TABLE 
 
-  CREATE OR REPLACE PROCEDURE POPULATE_DIMENSION_CLIENT
+ CREATE OR REPLACE PROCEDURE POPULATE_DIMENSION_CLIENT
   AS
   BEGIN
     INSERT
@@ -111,29 +108,6 @@
       C.ID = CD.ID ;
     COMMIT;
   END POPULATE_DIMENSION_CLIENT;
-        
-
-        
-        
-        
-        
-        
+                  
+                  
   EXEC POPULATE_DIMENSION_CLIENT;
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-
-
-
-
