@@ -15,7 +15,7 @@ CREATE
     Treatment_Am_Pm           VARCHAR2 ( 255 ),
     Injury_Treatment_Interval VARCHAR2 ( 255 BYTE )
   )
-  nologging; -- nologgng is used for faster insertion/deletion as there will be no redo log
+  nologging; -- nologgng is used for faster insertion/deletion as there will be no "redo log".
 
 
 -- PROCEDURE FOR INSERTING DATA INTO DIMENSION TABLE FROM SOURCE TABLE 
@@ -48,7 +48,7 @@ CREATE
       TREATMENT_AM_PM,
       ( INJURY_HOUR - TREATMENT_HOUR )
     FROM
-      prod7.GER_EVENT_INJURY -- ei table e grant dite hobe 'prod7' schema theke. SQL CODE : GRANT SELECT ON GER_EVENT_INJURY TO DWTEST_MONIR;
+      prod7.GER_EVENT_INJURY -- Ei table e grant dite hobe 'prod7' schema theke. SQL CODE : GRANT SELECT ON GER_EVENT_INJURY TO DWTEST_MONIR;
       COMMIT;
   END POPULATE_DIMENSION_INJURY;
   
@@ -80,18 +80,4 @@ CREATE
   UPDATE DIMENSION_INJURY
   SET Injury_Treatment_Interval = 12
   WHERE (Injury_Am_Pm = 'pm' AND Injury_Hour = 12 AND Treatment_Am_Pm = 'am' AND Treatment_Hour = 12 ) OR (Injury_Am_Pm = 'am' AND Injury_Hour = 12 AND Treatment_Am_Pm = 'pm' AND Treatment_Hour = 12 );
-
-
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+     
