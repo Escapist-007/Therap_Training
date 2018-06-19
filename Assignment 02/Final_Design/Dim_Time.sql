@@ -70,11 +70,3 @@
 -- Procedure Execution
 
      EXEC POPULATE_DIMENSION_TIME;
-
-
-
-
-
-
-
-
