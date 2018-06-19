@@ -175,18 +175,3 @@ WHERE
   AND GGE.EVENT_TYPE IN ( 1, 2, 5 ) ;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

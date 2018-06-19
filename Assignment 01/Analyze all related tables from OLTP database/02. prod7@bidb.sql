@@ -173,5 +173,4 @@ SELECT
 FROM
   ger;
 
-
  
